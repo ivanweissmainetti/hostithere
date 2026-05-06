@@ -1,8 +1,8 @@
 // ========== PART 4: Waitlist, FAQ, Report, Footer ==========
 
 // endpoint URLs preserved from original site — edit as needed
-const WAITLIST_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxe9rPBAXuU_BjVoa-3aO2rfSIGc-sprjenP6sMkMyrXHDuiPNwe4hr-QIYq7DUJuon/exec';
-const COMPLAINT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxe9rPBAXuU_BjVoa-3aO2rfSIGc-sprjenP6sMkMyrXHDuiPNwe4hr-QIYq7DUJuon/exec';
+const WAITLIST_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzDPqhAwREUQdb4wig4LujEDJF-4oNNP9BeDTO5HbOZcOkvw2lxh92BvGaKBIKsx9bFcQ/exec';
+const COMPLAINT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzDPqhAwREUQdb4wig4LujEDJF-4oNNP9BeDTO5HbOZcOkvw2lxh92BvGaKBIKsx9bFcQ/exec';
 
 function Waitlist() {
   const [step, setStep] = React.useState(0);
