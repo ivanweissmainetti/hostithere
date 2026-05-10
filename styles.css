@@ -173,6 +173,9 @@ section{padding:120px 0;position:relative}
 .hero.ready h1 .line:nth-child(3) > span{transition-delay:.24s}
 .hero .lede{font-size:17px;line-height:1.55;color:var(--mute-dark);max-width:520px;margin-bottom:32px}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-trust{display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.hero-trust span{font-size:13px;color:var(--mute-dark);letter-spacing:.01em}
+.hero-trust span:not(:nth-child(2n)){opacity:.85}
 
 /* hero visual */
 .hero-visual{position:relative;height:560px}

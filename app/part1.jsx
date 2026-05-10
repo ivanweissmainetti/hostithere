@@ -82,6 +82,13 @@ function Hero() {
             <a href="#waitlist" className="btn btn-primary">Join the waitlist <span className="arr">↗</span></a>
             <a href="#how" className="btn btn-ghost">See how it works</a>
           </div>
+          <div className="hero-trust">
+            <span>🔒 No live tracking</span>
+            <span>·</span>
+            <span>👥 Your circles, your rules</span>
+            <span>·</span>
+            <span>🔕 No feed, no noise</span>
+          </div>
         </div>
         <div className="hero-visual">
           <div className="notif n1">

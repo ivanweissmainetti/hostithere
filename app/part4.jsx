@@ -183,13 +183,9 @@ function Report() {
     <section className="report" id="report">
       <div className="wrap rp-grid">
         <Reveal className="rp-left">
-          <span className="eyebrow">Safety · 10</span>
-          <h2 style={{marginTop:16}}>Something off? Tell us.</h2>
-          <p className="lede">Bugs, privacy concerns, harassment, venue issues — whatever the category, we want to hear about it. Reports are read by a human, usually within 48 hours.</p>
-          <div className="alert">
-            <div className="ic">!</div>
-            <div className="t"><b>Immediate danger?</b><br/>Call local emergency services first. We can't provide emergency response through this form.</div>
-          </div>
+          <span className="eyebrow">Contact · 10</span>
+          <h2 style={{marginTop:16}}>Questions? We're here.</h2>
+          <p className="lede">Whether you have a question about Junto, want to partner with us, or just want to say hello — we read every message and reply within 48 hours.</p>
         </Reveal>
         <Reveal className="rp-card" delay={1}>
           {sent ? (
@@ -203,11 +199,11 @@ function Report() {
                 <label>Category</label>
                 <select name="category" defaultValue="" required>
                   <option value="">Select…</option>
+                  <option>General question</option>
+                  <option>Partnership or press</option>
                   <option>Bug report</option>
                   <option>Privacy concern</option>
-                  <option>Harassment</option>
-                  <option>Venue issue</option>
-                  <option>Safety concern</option>
+                  <option>Feedback or idea</option>
                   <option>Other</option>
                 </select>
               </div>
@@ -223,7 +219,7 @@ function Report() {
                 <label>Your email (optional — for follow-up)</label>
                 <input type="email" name="complaintEmail" placeholder="you@domain.com" />
               </div>
-              <button type="submit" className="btn-full">Send report <span className="arr">↗</span></button>
+              <button type="submit" className="btn-full">Send message <span className="arr">↗</span></button>
             </form>
           )}
         </Reveal>
