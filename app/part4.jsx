@@ -2,7 +2,7 @@
 
 // endpoint URLs preserved from original site — edit as needed
 const WAITLIST_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzDPqhAwREUQdb4wig4LujEDJF-4oNNP9BeDTO5HbOZcOkvw2lxh92BvGaKBIKsx9bFcQ/exec';
-const COMPLAINT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzDPqhAwREUQdb4wig4LujEDJF-4oNNP9BeDTO5HbOZcOkvw2lxh92BvGaKBIKsx9bFcQ/exec';
+const COMPLAINT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbw301-uJjWpEyRMWnHYD5GKcw4P1LeGUpD_RlCgjOKPlaTcP7Zct-weU3BrKlobWXHa/exec';
 
 function Waitlist() {
   const [step, setStep] = React.useState(0);
