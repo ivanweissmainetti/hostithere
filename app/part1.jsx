@@ -55,7 +55,7 @@ function Nav() {
   return (
     <nav className={`nav ${onLight ? 'on-light' : ''}`}>
       <a href="#top" className="brand">
-        <span className="dot"></span>Junto
+        <img src="/favicon.png" alt="" className="brand-logo" />Junto
       </a>
       <div className="nav-links">
         <a href="#how">How it works</a>
@@ -89,7 +89,7 @@ function Hero() {
           </h1>
           <p className="lede">
             Junto is the social app that turns "we should hang out" into an
-            actual walk to the corner café. Meet friends nearby — without
+            actual walk to the corner café. Meet friends nearby, without
             group-chat fatigue, constant tracking, or the feeling you've been
             scrolling too long.
           </p>
@@ -109,7 +109,7 @@ function Hero() {
           <div className="notif n1">
             <div className="av"></div>
             <div>
-              <div className="t"><b>Léa</b> just got to Café Belga — <b>6 min walk</b>.</div>
+              <div className="t"><b>Léa</b> just got to Café Belga · <b>6 min walk</b>.</div>
               <div className="s">coffee circle · 14:22</div>
             </div>
           </div>

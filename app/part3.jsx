@@ -31,7 +31,7 @@ function Privacy() {
             <div className="vis"><div className="me"></div></div>
             <ul>
               <li>Location used only to detect a check-in at a place</li>
-              <li>Only your selected circles see it — briefly</li>
+              <li>Only your selected circles see it, briefly</li>
               <li>No background tracking, no history feed</li>
               <li>Per-circle rules, quiet hours, instant pause</li>
             </ul>
@@ -42,7 +42,7 @@ function Privacy() {
           <div style={{marginTop:56,padding:'28px 32px',borderRadius:22,border:'1px solid var(--line-dark)',background:'var(--ink-2)',display:'flex',alignItems:'center',justifyContent:'space-between',gap:24,flexWrap:'wrap'}}>
             <div style={{maxWidth:440}}>
               <div className="eyebrow" style={{color:'var(--dusk)'}}>Try it</div>
-              <div style={{fontFamily:'Instrument Serif,serif',fontSize:26,marginTop:8,lineHeight:1.2}}>Toggle sharing modes — see what your circles would see.</div>
+              <div style={{fontFamily:'Instrument Serif,serif',fontSize:26,marginTop:8,lineHeight:1.2}}>Toggle sharing modes to see what your circles would see.</div>
             </div>
             <div style={{display:'flex',gap:10,background:'var(--ink-3)',padding:6,borderRadius:999,border:'1px solid var(--line-dark)'}}>
               <button onClick={()=>setMode('always')} style={{padding:'10px 18px',borderRadius:999,fontSize:13,background:mode==='always'?'var(--ember)':'transparent',color:mode==='always'?'#fff':'var(--mute-dark)'}}>Always-on</button>
@@ -100,7 +100,7 @@ function Highlights() {
         <Reveal>
           <span className="eyebrow">Highlights · 06</span>
           <h2 style={{marginTop:16}}>A <em>quiet</em> recap of real life.</h2>
-          <p className="lede">At the end of each month, Junto shows you the people you actually saw, the places you kept coming back to, and the moments worth remembering. For you — not for a feed.</p>
+          <p className="lede">At the end of each month, Junto shows you the people you actually saw, the places you kept coming back to, and the moments worth remembering. For you, not for a feed.</p>
           <div style={{display:'flex',gap:16,flexWrap:'wrap'}}>
             <div style={{padding:'10px 14px',borderRadius:999,border:'1px solid var(--line-dark)',fontSize:12,fontFamily:'JetBrains Mono,monospace',color:'var(--mute-dark)',letterSpacing:'.08em'}}>Private by default</div>
             <div style={{padding:'10px 14px',borderRadius:999,border:'1px solid var(--line-dark)',fontSize:12,fontFamily:'JetBrains Mono,monospace',color:'var(--mute-dark)',letterSpacing:'.08em'}}>Shareable, never forced</div>
@@ -166,7 +166,7 @@ function Differentiation() {
       <div className="wrap">
         <Reveal>
           <span className="eyebrow">Not another social app · 05</span>
-          <h2 style={{marginTop:16}}>Junto replaces the parts of social that <em>drain</em> you — and keeps the part that <em>matters.</em></h2>
+          <h2 style={{marginTop:16}}>Junto replaces the parts of social that <em>drain</em> you, and keeps the part that <em>matters.</em></h2>
         </Reveal>
         <Reveal className="diff-rows" delay={1}>
           {rows.map((r,i) => (

@@ -39,7 +39,7 @@ function HowItWorks() {
   const steps = [
     { t: 'Build your circles', d: 'Group friends how they actually live in your life: coffee people, gym people, the Thursday-night crew. Circles are private to you.',  view: 0, visible: false },
     { t: 'Get a quiet nudge',  d: 'When a friend from one of your circles is near a spot you love, you get one notification. No feed, no chatter. Just a gentle heads-up.',     view: 1, visible: true  },
-    { t: 'Meet, in real life', d: 'Tap "I\'m in" or swipe it away. No awkward group chat, no location broadcast — just the possibility of seeing a friend before the day gets away.', view: 2, visible: true  },
+    { t: 'Meet, in real life', d: 'Tap "I\'m in" or swipe it away. No awkward group chat, no location broadcast. Just the possibility of seeing a friend before the day gets away.', view: 2, visible: true  },
   ];
 
   const visibleSteps = steps.filter(s => s.visible);

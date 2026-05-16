@@ -83,6 +83,7 @@ section{padding:120px 0;position:relative}
 .nav.on-light{background:rgba(245,240,232,.7);border-bottom-color:var(--line);color:var(--ink)}
 .brand{display:flex;align-items:center;gap:10px;font-family:'Instrument Serif',serif;font-size:26px;letter-spacing:-.02em}
 .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--ember);display:inline-block}
+.brand-logo{width:26px;height:26px;object-fit:contain;display:inline-block;vertical-align:middle;margin-right:8px;position:relative;top:-1px}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-size:13px;opacity:.72;transition:opacity .2s}
 .nav-links a:hover{opacity:1}
@@ -744,6 +745,7 @@ section{padding:120px 0;position:relative}
 .footer h6{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute-dark);margin-bottom:16px}
 .footer .links{display:flex;flex-direction:column;gap:10px;font-size:14px}
 .footer .links a:hover{color:var(--ember)}
+.footer-logo{width:48px;height:48px;object-fit:contain;display:block;margin-bottom:12px}
 .footer .brand-col h3{font-family:'Instrument Serif',serif;font-size:56px;font-weight:400;letter-spacing:-.03em;line-height:1;margin-bottom:16px}
 .footer .brand-col p{font-size:14px;color:var(--mute-dark);line-height:1.55;max-width:280px}
 .footer-bot{display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid var(--line-dark);gap:20px;flex-wrap:wrap}

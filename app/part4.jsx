@@ -234,6 +234,7 @@ function Footer() {
       <div className="wrap">
         <div className="footer-top">
           <div className="brand-col">
+            <img src="/favicon.png" alt="Junto" className="footer-logo" />
             <h3>Junto</h3>
             <p>A quieter way to see your friends in real life. Built in Brussels, launching at universities first.</p>
             <a href="#waitlist" className="btn btn-primary" style={{marginTop:20}}>Join the waitlist <span className="arr">↗</span></a>
