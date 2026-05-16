@@ -233,7 +233,7 @@ section{padding:120px 0;position:relative}
   line-height:1.08;letter-spacing:-.025em;
   max-width:1100px;
 }
-.value h2 .w{display:inline-block;transition:color .6s, transform .6s;color:var(--mute-dark)}
+.value h2 .w{display:inline;transition:color .6s;color:var(--mute-dark)}
 .value h2 .w.on{color:var(--ivory)}
 .value h2 em{font-style:italic;color:var(--ember)}
 .value h2 em.b{color:var(--dusk)}
