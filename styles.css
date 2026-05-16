@@ -461,11 +461,11 @@ section{padding:120px 0;position:relative}
   transition:transform .35s cubic-bezier(.2,.8,.2,1);
 }
 .scene:hover{transform:translateY(-6px)}
-.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 0%, rgba(0,0,0,.55) 100%);z-index:1}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%, rgba(0,0,0,.72) 100%);z-index:1}
 .scene > *{position:relative;z-index:2}
-.scene.coffee{background:linear-gradient(135deg,#8b5a3c,#5a3824)}
-.scene.class{background:linear-gradient(135deg,#4a6fa8,#2a4a7c)}
-.scene.night{background:linear-gradient(135deg,#7a5680,#4a2f50)}
+.scene.coffee{background-color:#8b5a3c;background-image:url('images/scene-coffee.png');background-size:cover;background-position:center top}
+.scene.class{background-color:#4a6fa8;background-image:url('images/scene-class.png');background-size:cover;background-position:center}
+.scene.night{background-color:#7a5680;background-image:url('images/scene-night.png');background-size:cover;background-position:center top}
 
 .scene .time{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;opacity:.8}
 .scene .title{font-family:'Instrument Serif',serif;font-size:32px;line-height:1.05;letter-spacing:-.02em}
@@ -473,8 +473,8 @@ section{padding:120px 0;position:relative}
 .scene .inline-pin{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.4);padding:6px 10px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em}
 .scene .inline-pin .d{width:6px;height:6px;border-radius:50%;background:#fff}
 
-/* scene backgrounds — illustrative stripes */
-.scene::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 40 L40 0' stroke='rgba(255,255,255,.04)' stroke-width='1'/%3E%3C/svg%3E");background-size:40px 40px}
+/* scene ::before reserved for future use */
+.scene::before{content:"";position:absolute;inset:0}
 
 /* ---------- HIGHLIGHTS ---------- */
 .hl{background:var(--ink)}
