@@ -5,10 +5,10 @@ const { useState, useEffect, useRef, useMemo } = React;
 // Set any value to false to hide that section without deleting its code.
 const FEATURES = {
   howItWorks:      true,
-  circlesBuilder:  true,
+  circlesBuilder:  false,
   privacy:         true,
   moment:          true,
-  highlights:      true,
+  highlights:      false,
   differentiation: true,
   proof:           true,
   instagramFeed:   true,
