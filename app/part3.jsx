@@ -237,11 +237,19 @@ function InstagramFeed() {
     if (!BEHOLD_FEED_ID) { setStatus('no-id'); return; }
     fetch(`https://feeds.behold.so/${BEHOLD_FEED_ID}`)
       .then(r => r.json())
-      .then(data => { setPosts((data || []).slice(0, 9)); setStatus('done'); })
+      .then(data => {
+        const posts = (data.posts || data || []).slice(0, 9);
+        setPosts(posts);
+        setStatus('done');
+      })
       .catch(() => setStatus('error'));
   }, []);
 
-  const thumb = (post) => post.mediaType === 'VIDEO' ? post.thumbnailUrl : post.mediaUrl;
+  // Use Behold's own CDN (never expires) over Instagram's signed URLs
+  const thumb = (post) => {
+    if (post.sizes && post.sizes.medium) return post.sizes.medium.mediaUrl;
+    return post.mediaType === 'VIDEO' ? post.thumbnailUrl : post.mediaUrl;
+  };
   const fmtDate = (ts) => new Date(ts).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'2-digit' });
   const cleanCaption = (c) => c ? c.replace(/#\S+/g, '').replace(/@\S+/g, '').trim().slice(0, 88) : '';
 
