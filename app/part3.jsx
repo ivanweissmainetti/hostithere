@@ -267,13 +267,18 @@ function InstagramFeed() {
           <p className="lede">Real people, real meet-ups. Follow along to see Junto come to life in Brussels.</p>
         </Reveal>
 
-        {/* Grid — real posts or skeletons */}
+        {/* Marquee — real posts (doubled for seamless loop) or skeletons */}
         {(status === 'done' || status === 'loading') && (
-          <div className="polaroid-grid">
-            {status === 'done'
-              ? posts.map((post, i) => (
+          <div className="polaroid-track-wrap">
+            <div className="polaroid-track">
+              {(status === 'done'
+                ? [...posts, ...posts]           // doubled so the loop is seamless
+                : [...POLAROID_ROTS, ...POLAROID_ROTS]
+              ).map((item, i) => {
+                const post = status === 'done' ? item : null;
+                return post ? (
                   <a
-                    key={post.id}
+                    key={`${post.id}-${i}`}
                     href={post.permalink}
                     target="_blank" rel="noopener"
                     className="polaroid"
@@ -289,11 +294,11 @@ function InstagramFeed() {
                       <time className="p-date">{fmtDate(post.timestamp)}</time>
                     </div>
                   </a>
-                ))
-              : POLAROID_ROTS.map((rot, i) => (
-                  <div key={i} className="polaroid polaroid--skel" style={{'--rot': rot}} />
-                ))
-            }
+                ) : (
+                  <div key={i} className="polaroid polaroid--skel" style={{'--rot': item}} />
+                );
+              })}
+            </div>
           </div>
         )}
 

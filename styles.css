@@ -627,18 +627,35 @@ section{padding:120px 0;position:relative}
 .insta-title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .insta-handle { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .06em; }
 
-/* 3-col polaroid grid with perspective */
-.polaroid-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px 28px;
-  padding: 20px 4px 40px;
+/* Marquee wrapper — clips overflow, fades edges */
+.polaroid-track-wrap {
+  overflow: hidden;
+  padding: 32px 0 56px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 100px, #000 calc(100% - 100px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 100px, #000 calc(100% - 100px), transparent);
+}
+
+/* Scrolling track */
+.polaroid-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: marquee-x 38s linear infinite;
+  will-change: transform;
+}
+.polaroid-track:hover { animation-play-state: paused; }
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* each polaroid */
 .polaroid {
   background: #f2ece0;
   padding: 10px 10px 44px;
+  width: 240px;
+  flex-shrink: 0;
   transform: rotate(var(--rot, 0deg));
   transform-origin: center 60%;
   transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
@@ -650,7 +667,7 @@ section{padding:120px 0;position:relative}
   will-change: transform;
 }
 .polaroid:hover {
-  transform: rotate(0deg) scale(1.05);
+  transform: rotate(0deg) scale(1.06);
   box-shadow: 0 16px 48px rgba(0,0,0,.55);
   z-index: 4;
 }
@@ -714,14 +731,10 @@ section{padding:120px 0;position:relative}
 /* fallback (no feed ID / error) */
 .insta-fallback { text-align: center; padding: 64px 0; }
 
-@media (max-width: 860px) {
-  .polaroid-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 18px; }
-  .polaroid--skel { height: 220px; }
-}
-@media (max-width: 480px) {
-  .polaroid-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .polaroid { padding: 8px 8px 36px; }
-  .polaroid--skel { height: 170px; }
+@media (max-width: 600px) {
+  .polaroid { width: 180px; padding: 8px 8px 36px; }
+  .polaroid--skel { height: 196px; }
+  .polaroid-track { gap: 18px; }
 }
 
 /* ---------- FOOTER ---------- */
