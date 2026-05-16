@@ -114,7 +114,7 @@ function Waitlist() {
               </div>
               <div className="consent">
                 <input type="checkbox" id="consent" required />
-                <label htmlFor="consent">I agree to receive my invite & launch updates. See our <a href="#">privacy policy</a>.</label>
+                <label htmlFor="consent">I agree to receive my invite & launch updates. See our <a href="https://docs.google.com/document/d/e/2PACX-1vR3jCmHco-cbrZOWXppVlFe84S82ihaRjvN0iZSdkC-ergi7BmoKlDaNgu17bnTN07kzrvSIrciewyc/pub" target="_blank" rel="noopener">privacy policy</a>.</label>
               </div>
               <button type="submit" className="btn-full">Join the waitlist <span className="arr">↗</span></button>
             </form>
@@ -259,10 +259,10 @@ function Footer() {
           <div>
             <h6>Legal</h6>
             <div className="links">
-              <a href="#">Privacy policy</a>
-              <a href="#">Terms</a>
-              <a href="#">Cookies</a>
-              <a href="#">Data requests</a>
+              <a href="https://docs.google.com/document/d/e/2PACX-1vR3jCmHco-cbrZOWXppVlFe84S82ihaRjvN0iZSdkC-ergi7BmoKlDaNgu17bnTN07kzrvSIrciewyc/pub" target="_blank" rel="noopener">Privacy policy</a>
+              <a href="https://docs.google.com/document/d/e/2PACX-1vReVbRrenxKTFxVrYKwT9CzwIB6Yn6RM95Yk6hVqDBSTK8Ro3YG6BbwEcsp-e_pe7dmgEEg7ci5tKVl/pub" target="_blank" rel="noopener">Terms</a>
+              <a href="https://docs.google.com/document/d/e/2PACX-1vRVNHzkXq5atw0JGcEaWTsFfVXzNnzFpDMlNK0D-2EA2OJqxwQBHHngaUFddxdRC-u_lKHMX3DO8D0C/pub" target="_blank" rel="noopener">EULA</a>
+              <a href="https://docs.google.com/document/d/e/2PACX-1vR3jCmHco-cbrZOWXppVlFe84S82ihaRjvN0iZSdkC-ergi7BmoKlDaNgu17bnTN07kzrvSIrciewyc/pub" target="_blank" rel="noopener">Data requests</a>
             </div>
           </div>
         </div>
