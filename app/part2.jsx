@@ -37,10 +37,14 @@ function HowItWorks() {
   }, []);
 
   const steps = [
-    { num: '01', t: 'Build your circles', d: 'Group friends how they actually live in your life — coffee people, gym people, the Thursday-night crew. Circles are private to you.' },
-    { num: '02', t: 'Get a quiet nudge', d: 'When a friend from one of your circles is near a spot you love, you get one notification. No feed, no chatter — just a gentle heads-up.' },
-    { num: '03', t: 'Meet, in real life', d: 'Tap "I\'m in" or swipe it away. No awkward group chat, no location broadcast — just the possibility of seeing a friend before the day gets away.' },
+    { t: 'Build your circles', d: 'Group friends how they actually live in your life — coffee people, gym people, the Thursday-night crew. Circles are private to you.',  view: 0, visible: false },
+    { t: 'Get a quiet nudge',  d: 'When a friend from one of your circles is near a spot you love, you get one notification. No feed, no chatter — just a gentle heads-up.',     view: 1, visible: true  },
+    { t: 'Meet, in real life', d: 'Tap "I\'m in" or swipe it away. No awkward group chat, no location broadcast — just the possibility of seeing a friend before the day gets away.', view: 2, visible: true  },
   ];
+
+  const visibleSteps = steps.filter(s => s.visible);
+  const total = String(visibleSteps.length).padStart(2, '0');
+  const activeView = visibleSteps[active]?.view ?? visibleSteps[0]?.view ?? 1;
 
   return (
     <section className="how" id="how">
@@ -52,14 +56,14 @@ function HowItWorks() {
       </div>
       <div className="wrap how-grid">
         <div className="how-steps">
-          {steps.map((s, i) => (
+          {visibleSteps.map((s, i) => (
             <div
               key={i}
               ref={el => stepRefs.current[i] = el}
               className={`step ${active === i ? 'active' : ''}`}
               onClick={() => setActive(i)}
             >
-              <div className="step-num"><b>{s.num}</b> / 03 · step</div>
+              <div className="step-num"><b>{String(i + 1).padStart(2, '0')}</b> / {total} · step</div>
               <h3>{s.t}</h3>
               <p>{s.d}</p>
             </div>
@@ -69,9 +73,9 @@ function HowItWorks() {
           <div className="phone">
             <div className="phone-screen">
               <PhoneStatus />
-              <View0 active={active === 0} />
-              <View1 active={active === 1} />
-              <View2 active={active === 2} />
+              <View0 active={activeView === 0} />
+              <View1 active={activeView === 1} />
+              <View2 active={activeView === 2} />
             </div>
           </div>
         </div>
