@@ -290,17 +290,17 @@ function App() {
       <Hero />
       <Marquee />
       <ValueProp />
-      <HowItWorks />
-      <CirclesBuilder />
-      <Privacy />
-      <Moment />
-      <Highlights />
-      <Differentiation />
-      <Proof />
-      <InstagramFeed />
-      <Waitlist />
-      <FAQ />
-      <Report />
+      {FEATURES.howItWorks      && <HowItWorks />}
+      {FEATURES.circlesBuilder  && <CirclesBuilder />}
+      {FEATURES.privacy         && <Privacy />}
+      {FEATURES.moment          && <Moment />}
+      {FEATURES.highlights      && <Highlights />}
+      {FEATURES.differentiation && <Differentiation />}
+      {FEATURES.proof           && <Proof />}
+      {FEATURES.instagramFeed   && <InstagramFeed />}
+      {FEATURES.waitlist        && <Waitlist />}
+      {FEATURES.faq             && <FAQ />}
+      {FEATURES.report          && <Report />}
       <Footer />
     </>
   );

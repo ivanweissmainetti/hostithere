@@ -1,6 +1,22 @@
 // ========== JUNTO COMPONENTS — PART 1: primitives + hero + value ==========
 const { useState, useEffect, useRef, useMemo } = React;
 
+// ── Feature flags ─────────────────────────────────────────────────────────────
+// Set any value to false to hide that section without deleting its code.
+const FEATURES = {
+  howItWorks:      true,
+  circlesBuilder:  true,
+  privacy:         true,
+  moment:          true,
+  highlights:      true,
+  differentiation: true,
+  proof:           true,
+  instagramFeed:   true,
+  waitlist:        true,
+  faq:             true,
+  report:          true,
+};
+
 // Reveal on scroll
 function Reveal({ children, delay = 0, as: Tag = 'div', className = '', ...rest }) {
   const ref = useRef(null);
