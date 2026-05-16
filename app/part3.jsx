@@ -7,7 +7,7 @@ function Privacy() {
       <div className="wrap">
         <Reveal className="privacy-head">
           <div>
-            <span className="eyebrow">Privacy · 04</span>
+            <span className="eyebrow">Privacy · 03</span>
             <h2 style={{marginTop:16}}>Shared when it <em>matters.</em><br/>Quiet the rest of the time.</h2>
           </div>
           <p className="lede">Junto isn't a map of where you are. It's a signal that says "I'm at a place, and I'm open to company." You control the when, the who, and the for-how-long.</p>
@@ -70,7 +70,7 @@ function Moment() {
     <section className="moment section-paper">
       <div className="wrap">
         <Reveal className="moment-head">
-          <span className="eyebrow">Live the moment · 05</span>
+          <span className="eyebrow">Live the moment · 04</span>
           <h2 style={{marginTop:16}}>Less planning. <em>More</em> showing up.</h2>
           <p className="lede">The best nights out weren't in the group chat. They started with "wait, you're here?"</p>
         </Reveal>
@@ -165,7 +165,7 @@ function Differentiation() {
     <section className="diff section-light">
       <div className="wrap">
         <Reveal>
-          <span className="eyebrow">Not another social app · 07</span>
+          <span className="eyebrow">Not another social app · 05</span>
           <h2 style={{marginTop:16}}>Junto replaces the parts of social that <em>drain</em> you — and keeps the part that <em>matters.</em></h2>
         </Reveal>
         <Reveal className="diff-rows" delay={1}>
@@ -193,7 +193,8 @@ function Proof() {
     <section className="proof">
       <div className="wrap">
         <Reveal>
-          <h3>Early believers · Brussels alpha testers</h3>
+          <span className="eyebrow">Social proof · 06</span>
+          <h3 style={{marginTop:16}}>Early believers · Brussels alpha testers</h3>
         </Reveal>
         <Reveal className="quotes" delay={1}>
           {quotes.map((q,i) => (
@@ -257,7 +258,7 @@ function InstagramFeed() {
     <section className="insta section-ink-2" id="community">
       <div className="wrap">
         <Reveal className="insta-head">
-          <span className="eyebrow">Community</span>
+          <span className="eyebrow">Community · 07</span>
           <div className="insta-title-row">
             <h2 style={{marginTop:16}}>From <em>the gram.</em></h2>
             <a href="https://instagram.com/juntosocials" target="_blank" rel="noopener" className="btn btn-ghost insta-handle">

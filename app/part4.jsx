@@ -53,7 +53,7 @@ function Waitlist() {
           {done ? (
             <div className="success">
               <div className="big">You're in.</div>
-              <p>We'll email you when Junto opens at your campus. Tell a friend — circles work better when yours is already on the list.</p>
+              <p>We'll email you when Junto opens at your campus. Tell a friend. Circles work better when yours is already on the list.</p>
               <span className="code">ALPHA · BRU · {new Date().getFullYear()}</span>
             </div>
           ) : (
@@ -128,11 +128,11 @@ function Waitlist() {
 function FAQ() {
   const [open, setOpen] = React.useState(0);
   const items = [
-    { q:'How does Junto notify me when friends are nearby?', a:"When a friend from one of your circles arrives at a place that matters — a café, your campus library, a venue you both like — Junto sends you one short notification. That's it. No feed, no real-time tracking, no live map of where anyone is." },
+    { q:'How does Junto notify me when friends are nearby?', a:"When a friend from one of your circles arrives at a place that matters (a café, your campus library, a venue you both like), Junto sends you one short notification. That's it. No feed, no real-time tracking, no live map of where anyone is." },
     { q:'Does Junto track my live location?', a:"No. Junto uses a place-based check-in model: your device notices you've arrived somewhere relevant, shares that briefly to the circles you chose, and forgets it. We don't store a trail, and there's no 'always-on' map." },
     { q:'Can I choose who gets notified when I\'m out?', a:"Yes. You create circles (coffee people, study friends, the Thursday crew) and decide which ones see your presence at which kinds of places. You can mute a circle, set quiet hours, or go dark for a day with one tap." },
-    { q:'How often will I get notifications?', a:"Rarely, on purpose. Junto is designed to feel like a friend tapping you on the shoulder — not a feed. Most users get 2–4 relevant pings a week. You can dial it up or down per circle." },
-    { q:'Is Junto only for students?', a:"We're launching with Brussels universities first because that's where spontaneous meet-ups happen fastest. But Junto is for anyone who wants less group chat and more real life. You can join the waitlist in any city — we'll open campuses and neighborhoods in waves." },
+    { q:'How often will I get notifications?', a:"Rarely, on purpose. Junto is designed to feel like a friend tapping you on the shoulder, not a feed. Most users get 2–4 relevant pings a week. You can dial it up or down per circle." },
+    { q:'Is Junto only for students?', a:"We're launching with Brussels universities first because that's where spontaneous meet-ups happen fastest. But Junto is for anyone who wants less group chat and more real life. You can join the waitlist in any city. We'll open campuses and neighborhoods in waves." },
     { q:'When does it launch?', a:"Closed alpha with Brussels universities is rolling out spring 2026. Waitlist members get the first invites; ambassadors get early access plus a chance to shape how circles work on their campus." },
   ];
   return (
@@ -185,7 +185,7 @@ function Report() {
         <Reveal className="rp-left">
           <span className="eyebrow">Contact · 10</span>
           <h2 style={{marginTop:16}}>Questions? We're here.</h2>
-          <p className="lede">Whether you have a question about Junto, want to partner with us, or just want to say hello — we read every message and reply within 48 hours.</p>
+          <p className="lede">Whether you have a question about Junto, want to partner with us, or just want to say hello: we read every message and reply within 48 hours.</p>
         </Reveal>
         <Reveal className="rp-card" delay={1}>
           {sent ? (
@@ -216,7 +216,7 @@ function Report() {
                 <textarea name="details" placeholder="What happened, where, and when…" required />
               </div>
               <div className="fgrp">
-                <label>Your email (optional — for follow-up)</label>
+                <label>Your email (optional, for follow-up)</label>
                 <input type="email" name="complaintEmail" placeholder="you@domain.com" />
               </div>
               <button type="submit" className="btn-full">Send message <span className="arr">↗</span></button>
@@ -242,8 +242,8 @@ function Footer() {
             <h6>Product</h6>
             <div className="links">
               <a href="#how">How it works</a>
-              <a href="#circles">Circles</a>
               <a href="#privacy">Privacy model</a>
+              <a href="#community">Community</a>
               <a href="#faq">FAQ</a>
             </div>
           </div>

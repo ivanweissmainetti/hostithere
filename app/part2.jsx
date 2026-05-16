@@ -37,8 +37,8 @@ function HowItWorks() {
   }, []);
 
   const steps = [
-    { t: 'Build your circles', d: 'Group friends how they actually live in your life — coffee people, gym people, the Thursday-night crew. Circles are private to you.',  view: 0, visible: false },
-    { t: 'Get a quiet nudge',  d: 'When a friend from one of your circles is near a spot you love, you get one notification. No feed, no chatter — just a gentle heads-up.',     view: 1, visible: true  },
+    { t: 'Build your circles', d: 'Group friends how they actually live in your life: coffee people, gym people, the Thursday-night crew. Circles are private to you.',  view: 0, visible: false },
+    { t: 'Get a quiet nudge',  d: 'When a friend from one of your circles is near a spot you love, you get one notification. No feed, no chatter. Just a gentle heads-up.',     view: 1, visible: true  },
     { t: 'Meet, in real life', d: 'Tap "I\'m in" or swipe it away. No awkward group chat, no location broadcast — just the possibility of seeing a friend before the day gets away.', view: 2, visible: true  },
   ];
 
@@ -51,7 +51,7 @@ function HowItWorks() {
       <div className="wrap" style={{marginBottom:48}}>
         <span className="eyebrow">How it works · 02</span>
         <h2 className="serif" style={{fontSize:'clamp(40px,5.5vw,72px)',marginTop:20,maxWidth:780,lineHeight:1}}>
-          Three taps between <em className="serif-it" style={{color:'var(--ember)'}}>"maybe"</em> and <em className="serif-it" style={{color:'var(--ember)'}}>"see you in ten."</em>
+          From <em className="serif-it" style={{color:'var(--ember)'}}>"maybe"</em> to <em className="serif-it" style={{color:'var(--ember)'}}>"see you in ten."</em>
         </h2>
       </div>
       <div className="wrap how-grid">
@@ -251,7 +251,7 @@ function CirclesBuilder() {
               You'll be notified when friends from{' '}
               <em>{focus.length ? focus.slice(0,2).join(', ') + (focus.length > 2 ? ` +${focus.length-2} more` : '') : 'no circles'}</em>
               {' '}are within <em>{radius.toFixed(1)} km</em>{quiet ? ', except between 23:00–08:00.' : '.'}
-              {!notif && ' — currently paused.'}
+              {!notif && ' Currently paused.'}
             </div>
           </Reveal>
         </div>

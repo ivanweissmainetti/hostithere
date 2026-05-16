@@ -59,7 +59,6 @@ function Nav() {
       </a>
       <div className="nav-links">
         <a href="#how">How it works</a>
-        <a href="#circles">Circles</a>
         <a href="#privacy">Privacy</a>
         <a href="#faq">FAQ</a>
         <a href="#waitlist" className="nav-cta">Join waitlist <span className="arr">↗</span></a>
