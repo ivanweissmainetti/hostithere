@@ -222,4 +222,85 @@ function Proof() {
   );
 }
 
+// ── Instagram Feed — retro polaroid grid ──────────────────────────────────────
+// 1. Go to behold.so → connect @juntosocials → create a feed → copy the Feed ID
+// 2. Paste it below. Done.
+const BEHOLD_FEED_ID = '';
+
+const POLAROID_ROTS = ['-3deg','2.5deg','-1.5deg','3deg','-2.5deg','1.5deg','-3.5deg','2deg','-1deg'];
+
+function InstagramFeed() {
+  const [posts, setPosts] = React.useState([]);
+  const [status, setStatus] = React.useState('loading');
+
+  React.useEffect(() => {
+    if (!BEHOLD_FEED_ID) { setStatus('no-id'); return; }
+    fetch(`https://feeds.behold.so/${BEHOLD_FEED_ID}`)
+      .then(r => r.json())
+      .then(data => { setPosts((data || []).slice(0, 9)); setStatus('done'); })
+      .catch(() => setStatus('error'));
+  }, []);
+
+  const thumb = (post) => post.mediaType === 'VIDEO' ? post.thumbnailUrl : post.mediaUrl;
+  const fmtDate = (ts) => new Date(ts).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'2-digit' });
+  const cleanCaption = (c) => c ? c.replace(/#\S+/g, '').replace(/@\S+/g, '').trim().slice(0, 88) : '';
+
+  return (
+    <section className="insta section-ink-2" id="community">
+      <div className="wrap">
+        <Reveal className="insta-head">
+          <span className="eyebrow">Community</span>
+          <div className="insta-title-row">
+            <h2 style={{marginTop:16}}>From <em>the gram.</em></h2>
+            <a href="https://instagram.com/juntosocials" target="_blank" rel="noopener" className="btn btn-ghost insta-handle">
+              @juntosocials <span className="arr">↗</span>
+            </a>
+          </div>
+          <p className="lede">Real people, real meet-ups. Follow along to see Junto come to life in Brussels.</p>
+        </Reveal>
+
+        {/* Grid — real posts or skeletons */}
+        {(status === 'done' || status === 'loading') && (
+          <div className="polaroid-grid">
+            {status === 'done'
+              ? posts.map((post, i) => (
+                  <a
+                    key={post.id}
+                    href={post.permalink}
+                    target="_blank" rel="noopener"
+                    className="polaroid"
+                    style={{'--rot': POLAROID_ROTS[i % POLAROID_ROTS.length]}}
+                  >
+                    <div className="polaroid-img">
+                      <img src={thumb(post)} alt={cleanCaption(post.caption) || 'Junto on Instagram'} loading="lazy" />
+                      {post.mediaType === 'VIDEO'          && <div className="p-badge">▶</div>}
+                      {post.mediaType === 'CAROUSEL_ALBUM' && <div className="p-badge">⧉</div>}
+                    </div>
+                    <div className="polaroid-foot">
+                      {cleanCaption(post.caption) && <p className="p-caption">{cleanCaption(post.caption)}</p>}
+                      <time className="p-date">{fmtDate(post.timestamp)}</time>
+                    </div>
+                  </a>
+                ))
+              : POLAROID_ROTS.map((rot, i) => (
+                  <div key={i} className="polaroid polaroid--skel" style={{'--rot': rot}} />
+                ))
+            }
+          </div>
+        )}
+
+        {/* Fallback when no feed ID yet or fetch failed */}
+        {(status === 'no-id' || status === 'error') && (
+          <div className="insta-fallback">
+            <p style={{opacity:.5,marginBottom:20}}>Instagram feed coming soon.</p>
+            <a href="https://instagram.com/juntosocials" target="_blank" rel="noopener" className="btn btn-ghost">
+              Follow @juntosocials <span className="arr">↗</span>
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 Object.assign(window, { Privacy, Moment, Highlights, Differentiation, Proof });

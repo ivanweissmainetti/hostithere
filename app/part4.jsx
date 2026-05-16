@@ -297,6 +297,7 @@ function App() {
       <Highlights />
       <Differentiation />
       <Proof />
+      <InstagramFeed />
       <Waitlist />
       <FAQ />
       <Report />
