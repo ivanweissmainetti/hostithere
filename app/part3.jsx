@@ -225,7 +225,7 @@ function Proof() {
 // ── Instagram Feed — retro polaroid grid ──────────────────────────────────────
 // 1. Go to behold.so → connect @juntosocials → create a feed → copy the Feed ID
 // 2. Paste it below. Done.
-const BEHOLD_FEED_ID = '';
+const BEHOLD_FEED_ID = 'HPkvcV1OkR4s2SWeIDvk';
 
 const POLAROID_ROTS = ['-3deg','2.5deg','-1.5deg','3deg','-2.5deg','1.5deg','-3.5deg','2deg','-1deg'];
 
