@@ -181,6 +181,7 @@ function Report() {
   };
   return (
     <section className="report" id="report">
+      <span id="contact" style={{position:'absolute',marginTop:-80,display:'block'}}></span>
       <div className="wrap rp-grid">
         <Reveal className="rp-left">
           <span className="eyebrow">Contact · 10</span>
