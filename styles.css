@@ -210,12 +210,40 @@ section{padding:120px 0;position:relative}
 }
 
 .hero-foot{
-  margin-top:80px;display:flex;justify-content:space-between;align-items:flex-end;
+  margin-top:80px;display:flex;justify-content:space-between;align-items:center;gap:24px;
   color:var(--mute-dark);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;
 }
-.hero-foot .scroll{display:inline-flex;align-items:center;gap:10px}
-.hero-foot .scroll .bar{width:1px;height:28px;background:var(--mute-dark);position:relative;overflow:hidden}
-.hero-foot .scroll .bar::after{content:"";position:absolute;top:0;left:0;width:100%;height:50%;background:var(--ivory);animation:scrollBar 2s linear infinite}
+.hero-foot > span:first-child{flex:1;min-width:0}
+
+/* Scroll indicator — mouse-pill with animated ember dot */
+.hero-foot .scroll{
+  flex-shrink:0;
+  display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+}
+.hero-foot .scroll .bar{
+  width:22px;height:36px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  position:relative;overflow:hidden;
+  /* reset old styles */
+  animation:none;
+}
+.hero-foot .scroll .bar::after{
+  content:"";
+  position:absolute;
+  top:6px;left:50%;transform:translateX(-50%);
+  width:3px;height:8px;
+  background:var(--ember);
+  border-radius:999px;
+  animation:scrollDot 2s cubic-bezier(.25,.46,.45,.94) infinite;
+}
+@keyframes scrollDot{
+  0%  {top:6px;opacity:1}
+  55% {top:20px;opacity:0}
+  56% {top:6px;opacity:0}
+  100%{top:6px;opacity:1}
+}
 @keyframes scrollBar{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
 
 /* ---------- MARQUEE ---------- */
